@@ -1,1 +1,1 @@
-# long-read_scripts
+# A collection of scripts used for long-read RNA seq analysis
