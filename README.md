@@ -23,6 +23,3 @@ Usage:
 $ ./filterGene.sh -i [input_file] -o [output_file] -g [gene_id]
 ```
 Replace [input_file] with your input file (either .gz or not), [output_file] with the output file name, and [gene_id] with the desired Ensembl gene ID.
-
-## Contributing
-If you would like to contribute to this repository, feel free to fork the repository and submit a pull request with your changes. Contributions are always welcome!
