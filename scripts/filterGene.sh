@@ -6,7 +6,7 @@ helpFunction()
 	echo "Usage: $0 -i input_file -o output_file -g gene_name"
 	echo -e "\t-i input file name"
 	echo -e "\t-o output file name"
-	echo -e "\t-g gene name to filter on"
+	echo -e "\t-g gene id to filter on"
 	exit 1
 }
 
@@ -15,7 +15,7 @@ do
 	case "$opt" in
 		i ) input_file="$OPTARG" ;;
 		o ) output_file="$OPTARG" ;;
-		g ) gene_name="$OPTARG" ;;
+		g ) gene_id="$OPTARG" ;;
 		? ) helpFunction ;;
 	esac
 done
@@ -27,7 +27,7 @@ then
 fi
 
 if [[ $input_file == *.gz ]]; then
-    zcat "$input_file" | awk -F "\t" -v gene="$gene_name" 'NR == 1 || $2 == gene {print}' > "$output_file"
+    zcat "$input_file" | awk -F "\t" -v gene="$gene_id" 'NR == 1 || $2 == gene {print}' > "$output_file"
 else
-    awk -F "\t" -v gene="$gene_name" 'NR == 1 || $2 == gene {print}' "$input_file" > "$output_file"
+    awk -F "\t" -v gene="$gene_id" 'NR == 1 || $2 == gene {print}' "$input_file" > "$output_file"
 fi
