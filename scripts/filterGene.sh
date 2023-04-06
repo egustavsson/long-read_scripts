@@ -26,4 +26,8 @@ then
    helpFunction
 fi
 
-zcat "$input_file" | awk -F "\t" -v gene="$gene_name" 'NR == 1 || $2 == gene {print}' > "$output_file"
+if [[ $input_file == *.gz ]]; then
+    zcat "$input_file" | awk -F "\t" -v gene="$gene_name" 'NR == 1 || $2 == gene {print}' > "$output_file"
+else
+    awk -F "\t" -v gene="$gene_name" 'NR == 1 || $2 == gene {print}' "$input_file" > "$output_file"
+fi
