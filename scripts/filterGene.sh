@@ -3,7 +3,7 @@
 helpFunction()
 {
 	echo ""
-	echo "Usage: $0 -i input_file -o output_file -g gene_name"
+	echo "Usage: $0 -i input_file -o output_file -g gene_id"
 	echo -e "\t-i input file name"
 	echo -e "\t-o output file name"
 	echo -e "\t-g gene id to filter on"
