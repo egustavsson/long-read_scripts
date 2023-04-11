@@ -23,3 +23,13 @@ Usage:
 $ ./filterGene.sh -i [input_file] -o [output_file] -g [gene_id]
 ```
 Replace [input_file] with your input file (either .gz or not), [output_file] with the output file name, and [gene_id] with the desired Ensembl gene ID.
+
+**`filterGeneFromFile.sh`**
+
+This script does the same thing as `filterGene.sh` but takes a tab-delimited file with gene ids as input.
+
+Usage:
+```
+$ ./filterGeneFromFile.sh -i [input_file] -o [output_file] -g [gene_id_file]
+```
+Replace [input_file] with your input file (either .gz or not), [output_file] with the output file name, and [gene_id_file] with the desired Ensembl gene ID in a tab-delimited file.
