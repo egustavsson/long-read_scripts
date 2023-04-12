@@ -1,6 +1,6 @@
 # Useful Long-Read RNA-Seq Analysis Scripts
 
-This repository contains a collection of scripts used for long-read RNA-seq data analysis. The scripts are designed to perform various tasks such as filtering FASTQ files based on read length and filtering GTF/GFF/GCT or similar tab-delimited files by gene of interest.
+This repository contains a collection of scripts used for long-read RNA-seq data analysis. The scripts are designed to perform various tasks such as filtering FASTQ files based on read length and filtering GTF/GFF/GCT or similar tab-delimited files by genes of interest.
 
 ## Script Descriptions
 
