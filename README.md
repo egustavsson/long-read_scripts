@@ -34,13 +34,13 @@ $ ./filterGeneFromFile.sh -i [input_file] -o [output_file] -g [gene_id_file]
 ```
 Replace [input_file] with your input file (either .gz or not), [output_file] with the output file name, and [gene_id_file] with the desired Ensembl gene ID in a tab-delimited file.
 
-**`filterClinvar.sh`**
+**`getClinVarForLoci.sh`**
 
 This script is used to download and filter ClinVar VCF file by chromosome, start and end positions.
 
 Usage:
 ```
-$ ./filterClinvar.sh -d [directory] -c [chromosome] -s [start_position] -e [end_position] -u [download_url]
+$ ./getClinVarForLoci.sh -d [directory] -c [chromosome] -s [start_position] -e [end_position] -u [download_url]
 ```
 Replace [directory] with the output directory path, by default it uses the current directory. Replace [chromosome] with the desired chromosome number, [start_position] with the desired start position and [end_position] with the desired end position. Replace [download_url] with the desired ClinVar VCF download URL, by default it uses the latest version from https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh38/.
 
