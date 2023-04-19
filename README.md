@@ -42,6 +42,6 @@ Usage:
 ```
 $ ./filterClinvar.sh -d [directory] -c [chromosome] -s [start_position] -e [end_position] -u [download_url]
 ```
-Replace [directory] with the output directory path, [chromosome] with the desired chromosome number, [start_position] with the desired start position, [end_position] with the desired end position, and [download_url] with the desired ClinVar VCF download URL.
+Replace [directory] with the output directory path, by default it uses the current directory. Replace [chromosome] with the desired chromosome number, [start_position] with the desired start position and [end_position] with the desired end position. Replace [download_url] with the desired ClinVar VCF download URL, by default it uses the latest version from https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh38/.
 
 Note: By default, the script downloads the ClinVar VCF file for GRCh38 assembly from the NCBI FTP server. If you want to use a different VCF file, specify its download URL with the -u option.
