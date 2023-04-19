@@ -21,11 +21,11 @@ do
 done
 
 # Download file
-wget -O "$directory/clinvar_20230416.vcf.gz" "$download_url"
+wget -O "$directory/clinvar.vcf.gz" "$download_url"
 
 # Filter vcf file using tabix
-tabix -p vcf "clinvar_20230416.vcf.gz"
+tabix -p vcf "clinvar.vcf.gz"
 
-tabix "clinvar_20230416.vcf.gz" "$chr:$start-$end" > "$directory/filtered.vcf.gz"
+tabix "clinvar.vcf.gz" "$chr:$start-$end" > "$directory/filtered.vcf.gz"
 
 tabix -p vcf "$directory/filtered.vcf.gz"
