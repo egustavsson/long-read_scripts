@@ -4,9 +4,9 @@ This repository contains a collection of scripts used for long-read RNA-seq data
 
 ## Script Descriptions
 
-###**`LengthFilterFQ.sh`**
+### LengthFilterFQ.sh
 
-This script is used to filter FASTQ files based on minimum and maximum read length.
+`LengthFilterFQ.sh` This script is used to filter FASTQ files based on minimum and maximum read length.
 
 Usage: 
 ```
