@@ -27,9 +27,7 @@ then
 fi
 
 if [[ $input_file == *.gz ]]; then
-    zcat "$input_file" | awk -F "\t" -v gene_id_file="$gene_id_file" 'BEGIN{ while((getline gene < gene_id_file) > 0) gene_id[gene] = 1 } NR == 1 || ($2 in gene_id) {print}' > "$output_file"
+    zcat "$input_file" | awk -F "\t" -v gene_id_file="$gene_id_file" 'BEGIN{ while((getline gene < gene_id_file) > 0) gene_id[gene] = 1 } NR <= 3 || ($2 in gene_id) {print}' > "$output_file"
 else
-    awk -F "\t" -v gene_id_file="$gene_id_file" 'BEGIN{ while((getline gene < gene_id_file) > 0) gene_id[gene] = 1 } NR == 1 || ($2 in gene_id) {print}' "$input_file" > "$output_file"
+    awk -F "\t" -v gene_id_file="$gene_id_file" 'BEGIN{ while((getline gene < gene_id_file) > 0) gene_id[gene] = 1 } NR <= 3 || ($2 in gene_id) {print}' "$input_file" > "$output_file"
 fi
-
-
